@@ -1,0 +1,1 @@
+class Convite extends ObjetoBase {}

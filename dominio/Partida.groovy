@@ -1,0 +1,1 @@
+class Partida extends ObjetoBase {}
