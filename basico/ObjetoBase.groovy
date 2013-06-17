@@ -1,4 +1,4 @@
-package  br.com.btoffoli.jogoDeTurno
+package  basico
 
 class ObjetoBase {
 //    Long id
@@ -34,7 +34,14 @@ class ObjetoBase {
         return result
     }
 
-    def to_s
-    "<class:#{self.class} id:#{@id} - criacao:#{@criacao}>"
-    end
+
+
+    @Override
+    public String toString() {
+        return "ObjetoBase{" +
+                "id='" + id + '\'' +
+                ", dtCriacao=" + dtCriacao +
+                ", dtFinalizacao=" + dtFinalizacao +
+                '}';
+    }
 }

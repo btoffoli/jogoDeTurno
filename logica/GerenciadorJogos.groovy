@@ -1,3 +1,7 @@
+package logica
+
+import br.com.btoffoli.basico.ObjetoBase
+
 class GerenciadorJogos extends ObjetoBase {
     Servidor servidor
     List<Usuario> usuarios

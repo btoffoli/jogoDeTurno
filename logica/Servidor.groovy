@@ -1,4 +1,4 @@
-
+package logica
 
 class Servidor extends ServerSocket {
 
