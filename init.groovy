@@ -35,18 +35,13 @@ import groovy.lang.GroovyClassLoader
 //l = classLoader.loadClass('br.com.btoffoli.jogoDeTurno.basico.ObjetoBase')?.newInstance()
 
 
-import basico.ObjetoBase
 
-l = new ObjetoBase()
-
-println(l)
+Integer porta = (this.args && this.args[0].isInteger()) ? this.args[0].toInteger() : 2000
 
 
 
+println porta
 
+import logica.GerenciadorJogos
 
-//l = ClassLoader.forName('ObjetoBase', true, classLoader).newInstance()
-//println(l)
-//cl.loadClass('Convite', true)
-//import Convite
-//println new Convite()
+GerenciadorJogos gerenciador = new GerenciadorJogos(porta)

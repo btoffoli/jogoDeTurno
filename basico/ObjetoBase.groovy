@@ -1,14 +1,13 @@
 package  basico
 
 class ObjetoBase {
-//    Long id
     String id
     Date dtCriacao
-    Date dtFinalizacao
+    Date dtAtualizacao
 
     ObjetoBase() {
         id = UUID.randomUUID() as String
-        dtCriacao = new Date()
+        dtCriacao = dtAtualizacao = new Date()
     }
 
     boolean equals(o) {
