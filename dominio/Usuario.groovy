@@ -7,12 +7,15 @@ class Usuario extends ObjetoBase {
     String apelido
     String ip
     Socket socket
+    Date dtUltimaMsg = new Date()
 
     @Override
     public String toString() {
-        return "Usuario{" +
+        /*return "Usuario{" +
                 "apelido='" + apelido + '\'' +
                 ", ip='" + ip + '\'' +
                 '}';
+                */
+        return apelido
     }
 }
