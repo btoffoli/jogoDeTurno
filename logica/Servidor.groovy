@@ -4,24 +4,31 @@ package logica
 
 class Servidor extends ServerSocket {
 
+
+
     GerenciadorJogos gerenciador
 
     Servidor(int porta){
         super(porta)
     }
 
-    Servidor(int porta, GerenciadorJogos gerenciador) {
+    Servidor(int porta, logica.GerenciadorJogos gerenciador) {
         super(porta)
         this.gerenciador = gerenciador
     }
 
 
 
-
+    @Override
     Socket accept(Closure<Socket> closure) throws IOException {
         //closure()
         //println 'lalala'
         return super.accept(closure)    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
+    @Override
+    void close() throws IOException {
+        super.close()    //To change body of overridden methods use File | Settings | File Templates.
     }
 }
 

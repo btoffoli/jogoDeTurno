@@ -38,10 +38,12 @@ import groovy.lang.GroovyClassLoader
 
 Integer porta = (this.args && this.args[0].isInteger()) ? this.args[0].toInteger() : 2000
 
+boolean iniciarComConsole = this.args.size() > 1 && this.args[1].toBoolean()
+
 
 
 println porta
 
 import logica.GerenciadorJogos
 
-GerenciadorJogos gerenciador = new GerenciadorJogos(porta)
+GerenciadorJogos gerenciador = iniciarComConsole ? new GerenciadorJogos(porta, System.console()) : new GerenciadorJogos(porta)
